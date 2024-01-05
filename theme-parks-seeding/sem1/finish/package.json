@@ -1,0 +1,24 @@
+{
+  "name": "be-pg-themeparks",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test-seed": "PGDATABASE=pokemon jest seed.test.js",
+    "setup-db": "psql -f ./db/pokemon.sql",
+    "seed": "PGDATABASE=pokemon node db/run-seed.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/northcoders/be-pg-themeparks/issues"
+  },
+  "homepage": "https://github.com/northcoders/be-pg-themeparks#readme",
+  "devDependencies": {
+    "jest": "^29.5.0"
+  },
+  "dependencies": {
+    "pg": "^8.11.3",
+    "pg-format": "^1.0.4"
+  }
+}

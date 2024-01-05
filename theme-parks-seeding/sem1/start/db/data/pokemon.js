@@ -1,0 +1,92 @@
+module.exports = [
+  {
+    pokemon_name: "Pikachu",
+    year_captured: 2002,
+    owner_name: "Katherine",
+    battles_won: 5,
+  },
+  {
+    pokemon_name: "Charmander",
+    year_captured: 2004,
+    owner_name: "Katherine",
+    battles_won: 8,
+  },
+  {
+    pokemon_name: "Bulbasaur",
+    year_captured: 2003,
+    owner_name: "Katherine",
+    battles_won: 3,
+  },
+  {
+    pokemon_name: "Squirtle",
+    year_captured: 2005,
+    owner_name: "Tim",
+    battles_won: 6,
+  },
+  {
+    pokemon_name: "Jigglypuff",
+    year_captured: 2001,
+    owner_name: "Tim",
+    battles_won: 4,
+  },
+  {
+    pokemon_name: "Eevee",
+    year_captured: 2006,
+    owner_name: "Tim",
+    battles_won: 7,
+  },
+  {
+    pokemon_name: "Vulpix",
+    year_captured: 2000,
+    owner_name: "Katherine",
+    battles_won: 2,
+  },
+  {
+    pokemon_name: "Mewtwo",
+    year_captured: 1999,
+    owner_name: "Suzanna",
+    battles_won: 10,
+  },
+  {
+    pokemon_name: "Gyarados",
+    year_captured: 2007,
+    owner_name: "Caroline",
+    battles_won: 9,
+  },
+  {
+    pokemon_name: "Snorlax",
+    year_captured: 1998,
+    owner_name: "Suzanna",
+    battles_won: 12,
+  },
+  {
+    pokemon_name: "Magikarp",
+    year_captured: 2008,
+    owner_name: "Suzanna",
+    battles_won: 1,
+  },
+  {
+    pokemon_name: "Meowth",
+    year_captured: 1997,
+    owner_name: "Tim",
+    battles_won: 3,
+  },
+  {
+    pokemon_name: "Pidgey",
+    year_captured: 2009,
+    owner_name: "Caroline",
+    battles_won: 6,
+  },
+  {
+    pokemon_name: "Psyduck",
+    year_captured: 1996,
+    owner_name: "Suzanna",
+    battles_won: 5,
+  },
+  {
+    pokemon_name: "Gengar",
+    year_captured: 2010,
+    owner_name: "Tim",
+    battles_won: 8,
+  },
+];

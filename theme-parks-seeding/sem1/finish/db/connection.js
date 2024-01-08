@@ -8,6 +8,7 @@ const { Pool } = require("pg");
 if (!process.env.PGDATABASE) {
   throw new Error("No PGDATABASE configured");
 }
+console.log(process.env.PGDATABASE);
 
 const pool = new Pool();
 

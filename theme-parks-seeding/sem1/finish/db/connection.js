@@ -5,6 +5,10 @@
 
 const { Pool } = require("pg");
 
+if (!process.env.PGDATABASE) {
+  throw new Error("No PGDATABASE configured");
+}
+
 const pool = new Pool();
 
 module.exports = pool;

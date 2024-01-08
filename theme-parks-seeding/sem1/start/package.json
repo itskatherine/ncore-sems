@@ -1,9 +1,8 @@
 {
-  "name": "be-pg-themeparks",
+  "name": "be-pg-pokemon",
   "version": "1.0.0",
   "main": "app.js",
   "scripts": {
-    "test-seed": "PGDATABASE=pokemon jest seed.test.js",
     "setup-db": "psql -f ./db/pokemon.sql",
     "seed": "PGDATABASE=pokemon node db/run-seed.js"
   },

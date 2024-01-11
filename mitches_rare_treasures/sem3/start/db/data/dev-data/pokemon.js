@@ -1,0 +1,92 @@
+module.exports = [
+  {
+    pokemon_name: "Pikachu",
+    owner_name: "Katherine",
+    battles_won: 5,
+    type: "Electric",
+  },
+  {
+    pokemon_name: "Charmander",
+    owner_name: "Katherine",
+    battles_won: 8,
+    type: "Fire",
+  },
+  {
+    pokemon_name: "Bulbasaur",
+    owner_name: "Katherine",
+    battles_won: 3,
+    type: "Grass",
+  },
+  {
+    pokemon_name: "Squirtle",
+    owner_name: "Tim",
+    battles_won: 6,
+    type: "Water",
+  },
+  {
+    pokemon_name: "Jigglypuff",
+    owner_name: "Tim",
+    battles_won: 4,
+    type: "Normal",
+  },
+  {
+    pokemon_name: "Eevee",
+    owner_name: "Tim",
+    battles_won: 7,
+    type: "Normal",
+  },
+  {
+    pokemon_name: "Vulpix",
+    owner_name: "Katherine",
+    battles_won: 2,
+    type: "Fire",
+  },
+  {
+    pokemon_name: "Mewtwo",
+    owner_name: "Suzanna",
+    battles_won: 10,
+    type: "Psychic",
+  },
+  {
+    pokemon_name: "Gyarados",
+    owner_name: "Caroline",
+    battles_won: 9,
+    type: "Water",
+  },
+  {
+    pokemon_name: "Snorlax",
+    owner_name: "Suzanna",
+    battles_won: 12,
+    type: "Normal",
+  },
+  {
+    pokemon_name: "Magikarp",
+    owner_name: "Suzanna",
+    battles_won: 1,
+    type: "Water",
+  },
+  {
+    pokemon_name: "Meowth",
+    owner_name: "Tim",
+    battles_won: 3,
+    type: "Normal",
+  },
+  {
+    pokemon_name: "Pidgey",
+    owner_name: "Caroline",
+    battles_won: 6,
+    type: "Normal",
+  },
+  {
+    pokemon_name: "Psyduck",
+    owner_name: "Suzanna",
+    battles_won: 5,
+    type: "Water",
+  },
+  {
+    pokemon_name: "Gengar",
+    owner_name: "Tim",
+    battles_won: 8,
+    type: "Ghost",
+  },
+];

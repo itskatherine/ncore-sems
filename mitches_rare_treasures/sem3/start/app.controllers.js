@@ -1,9 +1,13 @@
-const { selectOwners } = require("./app.models");
+const { selectPokemon } = require("./app.models");
 
-const getOwners = (request, response) => {
-  selectOwners().then((owners) => {
-    response.status(200).send({ owners });
-  });
+const getPokemon = (request, response, next) => {
+  selectPokemon()
+    .then((pokemon) => {
+      response.status(200).send({ pokemon });
+    })
+    .catch((err) => {
+      next(err);
+    });
 };
 
-module.exports = { getOwners };
+module.exports = { getPokemon };

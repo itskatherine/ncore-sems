@@ -7,14 +7,23 @@ const db = require("../db/connection");
 beforeEach(() => seed(testData));
 afterAll(() => db.end());
 
-describe("GET all owners", () => {
-  test("200: returns an array of owners", () => {
+describe("GET all pokemon", () => {
+  test("200: returns an array of pokemon", () => {
     return request(app)
-      .get("/api/owners")
+      .get("/api/pokemon")
       .expect(200)
       .then(({ body }) => {
-        const { owners } = body;
-        expect(owners.length).toBe(4);
+        const { pokemon } = body;
+        expect(pokemon.length).toBe(15);
+        pokemon.forEach((singlePokemon) => {
+          expect(singlePokemon).toMatchObject({
+            pokemon_id: expect.any(Number),
+            owner_id: expect.any(Number),
+            pokemon_name: expect.any(String),
+            battles_won: expect.any(Number),
+            type: expect.any(String),
+          });
+        });
       });
   });
 });

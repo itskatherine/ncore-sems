@@ -1,9 +1,9 @@
 const db = require("./db/connection");
 
-const selectOwners = () => {
-  return db.query(`SELECT * FROM owners`).then((response) => {
+const selectPokemon = () => {
+  return db.query(`SELECT * FROM POKEMON`).then((response) => {
     return response.rows;
   });
 };
 
-module.exports = { selectOwners };
+module.exports = { selectPokemon };

@@ -1,0 +1,64 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+.good{
+  background-color: lime;
+}
+.bad{
+  background-color: red;
+}
+
+.header {
+  background-color: #333;
+  text-align: center;
+  padding: 20px 0;
+}
+
+#header-title {
+  color: #fff;
+}
+
+.content {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  text-align: center;
+  padding: 20px;
+}
+
+#profile-image {
+  display: block;
+  margin: 0 auto;
+  width: 20rem;
+  height: auto;
+}
+
+.intro {
+  font-size: 1.2em;
+}
+
+.favourites-title {
+  color: #333;
+}
+
+.favourites-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.favourite-item {
+  font-size: 1.2em;
+  margin: 10px 0;
+}
+
+#vote {
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(174, 136, 76),
+    rgb(235, 234, 236)
+  );
+  padding: 0.5rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  color: white;
+}

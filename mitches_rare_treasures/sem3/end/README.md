@@ -1,3 +1,7 @@
-# Instructions
+Go over seed file
+Go over current end point 
+Go over list of things to do
 
-Add to each owner a number of pokemon they have 
+
+Write first test
+Ask what approach should you take to pass first test

@@ -2,11 +2,15 @@ body {
   margin: 0;
   padding: 0;
 }
-.good{
+.green{
   background-color: lime;
 }
-.bad{
+.red{
   background-color: red;
+}
+
+ul{
+  list-style-type: none;
 }
 
 .header {

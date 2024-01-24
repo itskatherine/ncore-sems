@@ -1,15 +1,15 @@
 const imgOfObi = document.getElementById("profile-image");
-
 const pettingStatus = document.getElementById("pet-status");
+const refillButton = document.getElementById("refill");
 
 imgOfObi.addEventListener("mouseenter", () => {
   pettingStatus.innerText = "You are petting Obi :D";
-  pettingStatus.setAttribute("class", "good");
-  
+  pettingStatus.setAttribute("class", "green");
 });
+
 imgOfObi.addEventListener("mouseleave", () => {
   pettingStatus.innerText = "You are not petting Obi :(";
-  pettingStatus.setAttribute("class", "bad");
+  pettingStatus.setAttribute("class", "red");
 });
 
 const treats = [...document.getElementsByClassName("treat-item")];
@@ -20,4 +20,8 @@ treats.forEach((treat) => {
   });
 });
 
-
+refillButton.addEventListener("click", () => {
+  treats.forEach((treat) => {
+    treat.innerText = "Treat";
+  });
+});

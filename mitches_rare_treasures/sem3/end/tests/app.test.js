@@ -27,19 +27,6 @@ describe("GET all pokemon", () => {
       });
   });
 
-  test("200: should accept a valid owner query", () => {
-    return request(app)
-      .get("/api/pokemon?owner_name=Katherine")
-      .expect(200)
-      .then(({ body }) => {
-        const { pokemon } = body;
-        expect(pokemon.length).toBe(4);
-        pokemon.forEach((singlePokemon) => {
-          expect(singlePokemon.owner_name).toBe("Katherine");
-        });
-      });
-  });
-
   test("200: the pokemon are sorted by name by default", () => {
     return request(app)
       .get("/api/pokemon")
@@ -68,4 +55,34 @@ describe("GET all pokemon", () => {
         expect(body.msg).toBe("Invalid sort query");
       });
   });
+  test("200 should have the ability to change order ASC or DESC", () => {
+    return request(app)
+      .get("/api/pokemon?sort_by=battles_won&order=DESC")
+      .expect(200)
+      .then(({ body }) => {
+        const { pokemon } = body;
+        expect(pokemon).toBeSortedBy("battles_won", { descending: true });
+      });
+  });
+  test("400 shouldn't accept an invalid order query", () => {
+    return request(app)
+      .get("/api/pokemon?sort_by=battles_won&order=katherine")
+      .expect(400)
+      .then(({ body }) => {
+        expect(body.msg).toBe("Invalid order query");
+      });
+  });
+
+  // test("200: should accept a valid owner query", () => {
+  //   return request(app)
+  //     .get("/api/pokemon?owner_name=Katherine")
+  //     .expect(200)
+  //     .then(({ body }) => {
+  //       const { pokemon } = body;
+  //       expect(pokemon.length).toBe(4);
+  //       pokemon.forEach((singlePokemon) => {
+  //         expect(singlePokemon.owner_name).toBe("Katherine");
+  //       });
+  //     });
+  // });
 });

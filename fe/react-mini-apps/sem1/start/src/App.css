@@ -1,0 +1,45 @@
+#root {
+	max-width: 1280px;
+	margin: 0 auto;
+	padding: 2rem;
+	text-align: center;
+}
+
+h1 {
+	text-align: left;
+	padding: 1rem 2rem;
+	background-color: #1a1a1a;
+	border-top-right-radius: 0.5rem;
+	border-top-left-radius: 0.5rem;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+h2 {
+	text-align: left;
+	padding: 0rem 2rem;
+}
+
+ul {
+	padding: 0;
+}
+
+li {
+	list-style-type: none;
+	padding: 1rem 2rem;
+	text-align: left;
+}
+
+.card {
+	padding: 2em;
+}
+
+section {
+	background-color: #242424;
+	padding: 0;
+	border-radius: 0.5rem;
+}
+
+form {
+	padding: 1rem 2rem;
+}

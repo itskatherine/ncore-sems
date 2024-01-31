@@ -1,13 +1,15 @@
 import { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { getMoons, getPlanets } from "../../api";
+import Error from "./Error";
+import Loading from "./Loading";
 
 function MoonList() {
   const [moons, setMoons] = useState([]);
   const [planets, setPlanets] = useState([]);
-  const [selectedPlanet, setSelectedPlanet] = useState("");
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(false);
+
   const { planet_name } = useParams();
 
   const navigate = useNavigate();
@@ -15,9 +17,14 @@ function MoonList() {
   useEffect(() => {
     setError(null);
     // Fetch planets for the dropdown
-    getPlanets().then((data) => {
-      setPlanets(data.planets);
-    });
+    getPlanets()
+      .then((data) => {
+        setPlanets(data.planets);
+      })
+      .catch((error) => {
+        setError(error);
+        setIsLoading(false);
+      });
 
     // Fetch moons
     getMoons()
@@ -26,7 +33,7 @@ function MoonList() {
         setIsLoading(false);
       })
       .catch((error) => {
-        setError("Error fetching data");
+        setError(error);
         setIsLoading(false);
       });
   }, []);
@@ -36,14 +43,14 @@ function MoonList() {
   };
 
   if (isLoading) {
-    return <p>Loading moons...</p>;
+    return <Loading />;
   }
 
-  if (error) return <p>{error}</p>;
+  if (error) return <Error error={error} />;
 
   return (
     <div className="list-container">
-      <select value={planet_name} onChange={handlePlanetChange}>
+      <select onChange={handlePlanetChange}>
         <option value="">Select all</option>
         {planets.map((planet) =>
           planet.moon_count !== "0" ? (
@@ -54,13 +61,14 @@ function MoonList() {
         )}
       </select>
 
-      {moons.map((moon) => {
-        return moon.planet_name === planet_name ? (
-          <div key={moon.moon_id} className="list-item_container">
-            <p className="list-item_heading">{moon.moon_name}</p>
-          </div>
-        ) : null;
-      })}
+      {moons.map((moon) => (
+        <div key={moon.moon_id} className="list-item_container">
+          <p className="list-item_heading">{moon.moon_name}</p>
+          {planet_name === undefined ? (
+            <p className="list-item_detail">{moon.planet_name}</p>
+          ) : null}
+        </div>
+      ))}
     </div>
   );
 }

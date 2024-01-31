@@ -1,0 +1,157 @@
+.app-container {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.nav {
+  background-color: #333;
+  padding: 0.5em 0;
+}
+
+.nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.nav li {
+  margin: 0 1em;
+}
+
+.nav li a {
+  color: white;
+  text-decoration: none;
+}
+
+.main-content {
+  flex-grow: 1;
+  padding: 1em;
+  background-color: #f0f0f0;
+}
+
+.list-container {
+  background-color: white;
+  padding: 1em;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 1em 0;
+}
+
+.list-item_container {
+  border-bottom: 1px solid #ddd;
+  padding: 0.5em 0;
+}
+
+.list-item_container:last-child {
+  border-bottom: none;
+}
+
+.list-item_heading {
+  font-size: 18px;
+  margin: 0.5em 0;
+  color: #333;
+  font-weight: bold;
+}
+
+.list-item_heading a {
+  text-decoration: none;
+  color: #333;
+}
+
+.list-item_heading a:hover {
+  text-decoration: underline;
+}
+
+.list-item_detail {
+  font-size: 14px;
+  margin: 0.5em 0;
+  color: #666;
+}
+
+.list-item_image {
+  width: 100%; 
+  max-width: 200px; 
+  height: auto; 
+  border-radius: 10px; 
+  margin: 0 auto; 
+  display: block;
+}
+
+.header-container {
+  background-color: #282c34;
+  color: white;
+  padding: 1em 0;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header-container h1 {
+  margin: 0;
+  font-size: 2.5em;
+  font-weight: normal;
+}
+
+.home-container {
+  padding: 1em;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 1em;
+}
+
+.home-container h2 {
+  color: #333;
+  margin-bottom: 0.5em;
+}
+
+.home-container p {
+  color: #555;
+  line-height: 1.6;
+}
+
+.home-container ul {
+  margin-left: 20px;
+  list-style-type: disc;
+}
+
+.error-display {
+  background-color: #ffdede;
+  color: #d44;
+  padding: 1em;
+  border-radius: 8px;
+  margin: 1em 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.error-display h2 {
+  margin-top: 0;
+}
+
+.error-display pre {
+  background-color: #fff0f0;
+  padding: 1em;
+  border-radius: 4px;
+  overflow-x: auto;
+}
+
+.loading-container {
+  background-color: #f0f8ff;
+  color: #0366d6;
+  padding: 1em;
+  border-radius: 8px;
+  margin: 1em 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.loading-container p {
+  margin: 0;
+  font-size: 1.2em;
+}

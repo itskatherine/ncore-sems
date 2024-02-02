@@ -21,7 +21,7 @@ function PlanetList() {
         setError("Error fetching data");
         setIsLoading(false);
       });
-  }, []);
+  }, [type]);
 
   if (isLoading) {
     return <Loading />;

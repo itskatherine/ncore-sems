@@ -61,14 +61,22 @@ function MoonList() {
         )}
       </select>
 
-      {moons.map((moon) => (
-        <div key={moon.moon_id} className="list-item_container">
-          <p className="list-item_heading">{moon.moon_name}</p>
-          {planet_name === undefined ? (
-            <p className="list-item_detail">{moon.planet_name}</p>
-          ) : null}
-        </div>
-      ))}
+      {moons.map((moon) => {
+        if (!planet_name) {
+          return (
+            <div key={moon.moon_id} className="list-item_container">
+              <p className="list-item_heading">{moon.moon_name}</p>
+              <p className="list-item_detail">{moon.planet_name}</p>
+            </div>
+          );
+        } else {
+          return moon.planet_name === planet_name ? (
+            <div key={moon.moon_id} className="list-item_container">
+              <p className="list-item_heading">{moon.moon_name}</p>
+            </div>
+          ) : null;
+        }
+      })}
     </div>
   );
 }
